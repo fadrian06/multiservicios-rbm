@@ -1,143 +1,70 @@
-<section id="new-arrival" class="new-arrival py-5">
-  <div class="container-fluid">
-    <div
-      class="d-flex flex-wrap justify-content-between align-items-center mt-5 mb-3"
-    >
-      <h4 class="text-uppercase">Our New Arrivals</h4>
-      <a href="shop.html" class="btn-link">View All Products</a>
-    </div>
+---
+const products = [
+  {
+    name: "Phone Cover 5.6 inches",
+    price: "$95.00",
+    image: "images/product-small-1.jpg",
+    link: "single-product.html",
+  },
+  {
+    name: "Smart Phone 128GB RAM",
+    price: "$55.00",
+    image: "images/product-small-2.jpg",
+    link: "single-product.html",
+  },
+  {
+    name: "Smart Phone 128GB RAM",
+    price: "$55.00",
+    image: "images/product-small-3.jpg",
+    link: "single-product.html",
+  },
+  {
+    name: "Smart Phone 128GB RAM",
+    price: "$55.00",
+    image: "images/product-small-4.jpg",
+    link: "single-product.html",
+  },
+  {
+    name: "22 Inch LED Display",
+    price: "$65.00",
+    image: "images/product-small-5.jpg",
+    link: "single-product.html",
+  },
+];
+---
 
-    <div data-aos="fade-in">
-      <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5">
-        <div class="col">
-          <div class="product-item hover-effect-slide">
-            <div class="image-holder position-relative">
-              <a href="single-product.html">
-                <img
-                  src="images/product-small-1.jpg"
-                  alt="categories"
-                  class="product-image img-fluid"
-                />
-              </a>
-              <a href="#" class="btn btn-primary w-100 mt-2 rounded-1"
-                >Add to cart</a
-              >
-            </div>
-            <div
-              class="product-content d-flex flex-column flex-md-row justify-content-between align-items-md-center"
-            >
-              <h5 class="fs-5 mt-3">
-                <a href="single-product.html">Phone Cover 5.6 inches</a>
-              </h5>
-              <span>$95.00</span>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="product-item hover-effect-slide">
-            <div class="image-holder position-relative">
-              <a href="single-product.html">
-                <img
-                  src="images/product-small-2.jpg"
-                  alt="categories"
-                  class="product-image img-fluid"
-                />
-              </a>
-              <a href="#" class="btn btn-primary w-100 mt-2 rounded-1"
-                >Add to cart</a
-              >
-            </div>
-            <div
-              class="product-content d-flex flex-column flex-md-row justify-content-between align-items-md-center"
-            >
-              <h5 class="fs-5 mt-3">
-                <a href="single-product.html">Smart Phone 128GB RAM</a>
-              </h5>
-              <a href="#" class="text-decoration-none" data-after="Add to cart"
-                ><span>$55.00</span></a
-              >
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="product-item hover-effect-slide">
-            <div class="image-holder position-relative">
-              <a href="single-product.html">
-                <img
-                  src="images/product-small-3.jpg"
-                  alt="categories"
-                  class="product-image img-fluid"
-                />
-              </a>
-              <a href="#" class="btn btn-primary w-100 mt-2 rounded-1"
-                >Add to cart</a
-              >
-            </div>
-            <div
-              class="product-content d-flex flex-column flex-md-row justify-content-between align-items-md-center"
-            >
-              <h5 class="fs-5 mt-3">
-                <a href="single-product.html">Smart Phone 128GB RAM</a>
-              </h5>
-              <a href="#" class="text-decoration-none" data-after="Add to cart"
-                ><span>$55.00</span></a
-              >
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="product-item hover-effect-slide">
-            <div class="image-holder position-relative">
-              <a href="single-product.html">
-                <img
-                  src="images/product-small-4.jpg"
-                  alt="categories"
-                  class="product-image img-fluid"
-                />
-              </a>
-              <a href="#" class="btn btn-primary w-100 mt-2 rounded-1"
-                >Add to cart</a
-              >
-            </div>
-            <div
-              class="product-content d-flex flex-column flex-md-row justify-content-between align-items-md-center"
-            >
-              <h5 class="fs-5 mt-3">
-                <a href="single-product.html">Smart Phone 128GB RAM</a>
-              </h5>
-              <a href="#" class="text-decoration-none" data-after="Add to cart"
-                ><span>$55.00</span></a
-              >
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="product-item hover-effect-slide">
-            <div class="image-holder position-relative">
-              <a href="single-product.html">
-                <img
-                  src="images/product-small-5.jpg"
-                  alt="categories"
-                  class="product-image img-fluid"
-                />
-              </a>
-              <a href="#" class="btn btn-primary w-100 mt-2 rounded-1"
-                >Add to cart</a
-              >
-            </div>
-            <div
-              class="product-content d-flex flex-column flex-md-row justify-content-between align-items-md-center"
-            >
-              <h5 class="fs-5 mt-3">
-                <a href="single-product.html">22 Inch LED Display</a>
-              </h5>
-              <a href="#" class="text-decoration-none" data-after="Add to cart"
-                ><span>$65.00</span></a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+<div class="container-fluid mt-5" data-aos="fade-in">
+  <div class="d-flex justify-content-between align-items-center text-uppercase">
+    <h2>Our New Arrivals</h2>
+    <a href="shop.html" class="btn btn-link">View All Products</a>
   </div>
-</section>
+
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-xl-5">
+    {
+      products.map((product) => (
+        <div class="col">
+          <div class="product-item hover-effect-slide">
+            <div class="image-holder">
+              <a href={product.link}>
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  class="product-image img-fluid"
+                />
+              </a>
+              <a href="#" class="btn btn-primary w-100 mt-3">
+                Add to cart
+              </a>
+            </div>
+            <div class="product-content d-flex justify-content-between align-items-center gap-5 mt-3">
+              <h3 class="fs-5">
+                <a href={product.link}>{product.name}</a>
+              </h3>
+              {product.price}
+            </div>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</div>
