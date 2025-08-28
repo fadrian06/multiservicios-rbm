@@ -1,7 +1,7 @@
 ---
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/vendor.css";
-import "swiper/swiper-bundle.min.css";
+import "swiper/css/bundle";
 import "../styles/style.css";
 import "@fontsource/inter";
 import "bootstrap-icons/font/bootstrap-icons.min.css";
@@ -17,5 +17,13 @@ import "bootstrap-icons/font/bootstrap-icons.min.css";
 
   <body data-bs-theme="dark">
     <slot />
+
+    <script src="bootstrap/dist/js/bootstrap.bundle.min"></script>
+
+    <script>
+      import Swiper from "swiper/bundle";
+
+      window.Swiper = Swiper;
+    </script>
   </body>
 </html>
