@@ -9,6 +9,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@fontsource/inter": "^5.2.6",
     "astro": "^5.13.4",
     "bootstrap": "^5.3.8",
     "swiper": "^9.4.1"
