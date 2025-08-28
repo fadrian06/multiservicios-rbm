@@ -1,205 +1,124 @@
-<nav
-  class="navbar navbar-expand-lg text-white text-uppercase fs-7 ls-1 py-5 align-items-center"
->
+---
+const offcanvasId = crypto.randomUUID();
+
+const pages = [
+  { href: "shop.html", text: "Shop", badge: "PRO" },
+  { href: "single-product.html", text: "Single Product", badge: "PRO" },
+  { href: "blog.html", text: "Blog", badge: "PRO" },
+  { href: "single.html", text: "Single Post", badge: "PRO" },
+  { href: "single-post.html", text: "Single Post w/sidebar", badge: "PRO" },
+  { href: "about.html", text: "About", badge: "PRO" },
+  { href: "cart.html", text: "Cart", badge: "PRO" },
+  { href: "checkout.html", text: "Checkout", badge: "PRO" },
+  { href: "coming-soon.html", text: "Coming Soon", badge: "PRO" },
+  { href: "contact.html", text: "Contact", badge: "PRO" },
+  { href: "error-page.html", text: "Error Page", badge: "PRO" },
+  { href: "faqs.html", text: "FAQs", badge: "PRO" },
+  { href: "my-account.html", text: "My Account", badge: "PRO" },
+  { href: "order-tracking.html", text: "Order Tracking", badge: "PRO" },
+  { href: "wishlist.html", text: "Wishlist", badge: "PRO" },
+  { href: "styles.html", text: "Styles", badge: "PRO" },
+];
+---
+
+<nav class="navbar navbar-expand-xl">
   <div class="container-fluid">
-    <div class="row align-items-center w-100">
-      <div class="col-8 col-md-3">
-        <a class="navbar-brand" href="index.html"
-          ><img src="images/logo.svg" width="204" height="46" alt="logo" /></a
-        >
+    <a class="navbar-brand p-0" href="./">
+      <img
+        src="images/logo.svg"
+        height="46"
+        class="img-fluid object-fit-contain"
+        alt="logo"
+      />
+    </a>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id={offcanvasId}>
+      <div class="offcanvas-header">
+        <h2 class="offcanvas-title">Menu</h2>
         <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasNavbar"
-          aria-controls="offcanvasNavbar"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
         >
-          <span class="navbar-toggler-icon"></span>
         </button>
       </div>
-      <div class="col-1 col-md-6 d-md-flex justify-content-center">
-        <div
-          class="offcanvas offcanvas-end"
-          tabindex="-1"
-          id="offcanvasNavbar"
-          aria-labelledby="offcanvasNavbarLabel"
-        >
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
-            <button
-              type="button"
-              class="btn-close text-reset"
-              data-bs-dismiss="offcanvas"
-              aria-label="Close"></button>
-          </div>
 
-          <div class="offcanvas-body">
-            <ul
-              class="navbar-nav justify-content-end flex-grow-1 gap-1 gap-md-5 pe-3"
-            >
-              <li class="nav-item">
-                <a class="nav-link active" href="index.html">Home</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  id="dropdownPages"
-                  data-bs-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false">Pages</a
-                >
-                <ul
-                  class="dropdown-menu list-unstyled p-4"
-                  aria-labelledby="dropdownPages"
-                >
-                  <li>
-                    <a href="shop.html" class="dropdown-item item-anchor"
-                      >Shop <span class="badge bg-primary ms-2">PRO</span></a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="single-product.html"
-                      class="dropdown-item item-anchor"
-                      >Single Product <span class="badge bg-primary ms-2"
-                        >PRO</span
-                      ></a
-                    >
-                  </li>
-                  <li>
-                    <a href="blog.html" class="dropdown-item item-anchor"
-                      >Blog <span class="badge bg-primary ms-2">PRO</span></a
-                    >
-                  </li>
-                  <li>
-                    <a href="single.html" class="dropdown-item item-anchor"
-                      >Single Post <span class="badge bg-primary ms-2">PRO</span
-                      ></a
-                    >
-                  </li>
-                  <li>
-                    <a href="single-post.html" class="dropdown-item item-anchor"
-                      >Single Post w/sidebar <span class="badge bg-primary ms-2"
-                        >PRO</span
-                      ></a
-                    >
-                  </li>
-                  <li>
-                    <a href="about.html" class="dropdown-item item-anchor"
-                      >About <span class="badge bg-primary ms-2">PRO</span></a
-                    >
-                  </li>
-                  <li>
-                    <a href="cart.html" class="dropdown-item item-anchor"
-                      >Cart <span class="badge bg-primary ms-2">PRO</span></a
-                    >
-                  </li>
-                  <li>
-                    <a href="checkout.html" class="dropdown-item item-anchor"
-                      >Checkout <span class="badge bg-primary ms-2">PRO</span
-                      ></a
-                    >
-                  </li>
-                  <li>
-                    <a href="coming-soon.html" class="dropdown-item item-anchor"
-                      >Coming Soon <span class="badge bg-primary ms-2">PRO</span
-                      ></a
-                    >
-                  </li>
-                  <li>
-                    <a href="contact.html" class="dropdown-item item-anchor"
-                      >Contact <span class="badge bg-primary ms-2">PRO</span></a
-                    >
-                  </li>
-                  <li>
-                    <a href="error-page.html" class="dropdown-item item-anchor"
-                      >Error Page <span class="badge bg-primary ms-2">PRO</span
-                      ></a
-                    >
-                  </li>
-                  <li>
-                    <a href="faqs.html" class="dropdown-item item-anchor"
-                      >FAQs <span class="badge bg-primary ms-2">PRO</span></a
-                    >
-                  </li>
-                  <li>
-                    <a href="my-account.html" class="dropdown-item item-anchor"
-                      >My Account <span class="badge bg-primary ms-2">PRO</span
-                      ></a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="order-tracking.html"
-                      class="dropdown-item item-anchor"
-                      >Order Tracking <span class="badge bg-primary ms-2"
-                        >PRO</span
-                      ></a
-                    >
-                  </li>
-                  <li>
-                    <a href="wishlist.html" class="dropdown-item item-anchor"
-                      >Wishlist <span class="badge bg-primary ms-2">PRO</span
-                      ></a
-                    >
-                  </li>
-                  <li>
-                    <a href="styles.html" class="dropdown-item item-anchor"
-                      >Styles <span class="badge bg-primary ms-2">PRO</span></a
-                    >
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Collections</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Sale</a>
-              </li>
-              <li class="nav-item">
-                <a
-                  href="https://templatesjungle.gumroad.com/l/electrostore-bootstrap-html-template"
-                  target="_blank"
-                  class="btn btn-outline-light rounded-pill"
-                  href="#">Get PRO</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="col-3 col-md-3 text-md-end">
-        <ul class="list-unstyled d-flex justify-content-end m-0">
-          <li>
-            <a href="wishlist.html" class="mx-2">
-              <svg width="24" height="24" viewBox="0 0 24 24"
-                ><use xlink:href="icons.svg#heart"></use></svg
-              >
-            </a>
+      <div class="offcanvas-body">
+        <ul
+          class="navbar-nav w-100 justify-content-center align-items-xl-center gap-xl-5"
+        >
+          <li class="nav-item">
+            <a class="nav-link active" href="./">Home</a>
           </li>
-          <li>
+          <li class="nav-item dropdown">
             <a
-              href="cart.html"
-              class="mx-2"
-              data-bs-toggle="offcanvas"
-              data-bs-target="#offcanvasCart"
-              aria-controls="offcanvasCart"
+              class="nav-link dropdown-toggle"
+              href="#"
+              data-bs-toggle="dropdown"
             >
-              <svg width="24" height="24" viewBox="0 0 24 24"
-                ><use xlink:href="icons.svg#cart"></use></svg
-              >
+              Pages
             </a>
+            <ul class="dropdown-menu m-0 p-0">
+              {
+                pages.map((page) => (
+                  <li class="dropdown-item">
+                    <a
+                      href={page.href}
+                      class="d-flex justify-content-between align-items-center gap-5"
+                    >
+                      {page.text}
+                      <span class="badge bg-primary">{page.badge}</span>
+                    </a>
+                  </li>
+                ))
+              }
+            </ul>
           </li>
-          <li class="search-box" class="mx-2">
-            <a href="#search" class="search-button">
-              <svg width="24" height="24" viewBox="0 0 24 24"
-                ><use xlink:href="icons.svg#search"></use></svg
-              >
+          <li class="nav-item">
+            <a class="nav-link" href="#">Collections</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Sale</a>
+          </li>
+          <li class="nav-item">
+            <a
+              href="https://templatesjungle.gumroad.com/l/electrostore-bootstrap-html-template"
+              target="_blank"
+              class="btn btn-outline-light rounded-pill"
+              href="#"
+            >
+              Get PRO
             </a>
           </li>
         </ul>
       </div>
     </div>
+
+    <menu class="m-0 p-0 navbar-nav flex-row fs-3 gap-3">
+      <li class="nav-item">
+        <a class="nav-link bi bi-heart" href="wishlist.html"></a>
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link bi bi-cart"
+          href="cart.html"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasCart"
+        >
+        </a>
+      </li>
+      <li class="nav-item search-box">
+        <a href="#search" class="nav-link search-button bi bi-search"></a>
+      </li>
+    </menu>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target={`#${offcanvasId}`}
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
   </div>
 </nav>
