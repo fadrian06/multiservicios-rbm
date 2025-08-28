@@ -1,82 +1,72 @@
-<section class="categories overflow-hidden">
-  <div class="container-fluid">
-    <div class="row g-5">
-      <div class="col-md-3">
-        <span class="d-block py-3 text-white text-uppercase fs-7 ls-1"
-          >01. Electronic Gadgets</span
-        >
-        <div class="jarallax position-relative mb-4" style="height: 480px;">
-          <img
-            src="images/category-thumb-1.jpg"
-            alt="categories"
-            class="jarallax-img img-fluid"
-          />
-          <div
-            class="category-content position-absolute bottom-0 p-5 text-uppercase"
-          >
-            <a href="shop-four-column-wide.html" class="text-white btn-link"
-              >Shop it Now</a
-            >
+---
+const categories: {
+  name: string;
+  image: string;
+  link: string;
+  cols?: number;
+}[] = [
+  {
+    name: "Electronic Gadgets",
+    image: "images/category-thumb-1.jpg",
+    link: "shop-four-column-wide.html",
+  },
+  {
+    name: "Cool Stuff",
+    image: "images/category-thumb-2.jpg",
+    link: "shop-four-column-wide.html",
+  },
+  {
+    name: "Accessories",
+    image: "images/category-thumb-3.jpg",
+    link: "shop-four-column-wide.html",
+  },
+  {
+    name: "Display Units",
+    image: "images/category-thumb-4.jpg",
+    link: "shop-four-column-wide.html",
+  },
+];
+---
+
+<div class="container-fluid text-uppercase">
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-xl-4 row-gap-5">
+    {
+      categories.map((category, index) => (
+        <div class="col">
+          <div class="card">
+            <header class="card-header">
+              <h2 class="card-title h6 m-0">
+                {(index + 1).toString().padStart(2, "0")}. {category.name}
+              </h2>
+            </header>
+            <figure class="card-body jarallax m-0">
+              <img
+                src={category.image}
+                alt={category.name}
+                class="img-fluid jarallax-img object-fit-cover"
+              />
+              <figcaption class="position-absolute bottom-0 m-3">
+                <a href={category.link} class="btn btn-link fw-bolder">
+                  Shop it Now
+                </a>
+              </figcaption>
+            </figure>
           </div>
         </div>
-      </div>
-      <div class="col-md-2">
-        <span class="d-block py-3 text-white text-uppercase fs-7 ls-1"
-          >02. Cool Stuff</span
-        >
-        <div class="jarallax position-relative mb-3" style="height: 480px;">
-          <img
-            src="images/category-thumb-2.jpg"
-            alt="categories"
-            class="jarallax-img img-fluid"
-          />
-          <div
-            class="category-content position-absolute bottom-0 p-5 text-uppercase"
-          >
-            <a href="shop-four-column-wide.html" class="text-white btn-link"
-              >Shop it Now</a
-            >
-          </div>
-        </div>
-      </div>
-      <div class="col-md-5">
-        <span class="d-block py-3 text-white text-uppercase fs-7 ls-1"
-          >03. Accessories</span
-        >
-        <div class="jarallax position-relative mb-3" style="height: 480px;">
-          <img
-            src="images/category-thumb-3.jpg"
-            alt="categories"
-            class="jarallax-img img-fluid"
-          />
-          <div
-            class="category-content position-absolute bottom-0 p-5 text-uppercase"
-          >
-            <a href="shop-four-column-wide.html" class="text-white btn-link"
-              >Shop it Now</a
-            >
-          </div>
-        </div>
-      </div>
-      <div class="col-md-2">
-        <span class="d-block py-3 text-white text-uppercase fs-7 ls-1"
-          >04. Display Units</span
-        >
-        <div class="jarallax position-relative mb-3" style="height: 480px;">
-          <img
-            src="images/category-thumb-4.jpg"
-            alt="categories"
-            class="jarallax-img img-fluid"
-          />
-          <div
-            class="category-content position-absolute bottom-0 p-5 text-uppercase"
-          >
-            <a href="shop-four-column-wide.html" class="text-white btn-link"
-              >Shop it Now</a
-            >
-          </div>
-        </div>
-      </div>
-    </div>
+      ))
+    }
   </div>
-</section>
+</div>
+
+<style>
+  figure::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to bottom, transparent, black);
+    z-index: -1;
+  }
+</style>
