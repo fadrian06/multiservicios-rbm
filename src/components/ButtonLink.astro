@@ -1,0 +1,12 @@
+---
+export interface Props {
+  href: string;
+  target?: astroHTML.JSX.AnchorHTMLAttributes["target"];
+}
+
+const { href, target } = Astro.props;
+---
+
+<a href={href} target={target} class="btn btn-outline-light rounded-pill">
+  <slot />
+</a>

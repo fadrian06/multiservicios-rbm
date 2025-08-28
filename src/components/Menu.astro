@@ -1,4 +1,6 @@
 ---
+import ButtonLink from "./ButtonLink.astro";
+
 const offcanvasId = crypto.randomUUID();
 
 const pages = [
@@ -45,7 +47,7 @@ const pages = [
 
       <div class="offcanvas-body">
         <ul
-          class="navbar-nav w-100 justify-content-center align-items-xl-center gap-xl-5"
+          class="navbar-nav w-100 justify-content-center align-items-xl-center gap-3 gap-xl-5"
         >
           <li class="nav-item">
             <a class="nav-link active" href="./">Home</a>
@@ -81,14 +83,12 @@ const pages = [
             <a class="nav-link" href="#">Sale</a>
           </li>
           <li class="nav-item">
-            <a
+            <ButtonLink
               href="https://templatesjungle.gumroad.com/l/electrostore-bootstrap-html-template"
               target="_blank"
-              class="btn btn-outline-light rounded-pill"
-              href="#"
             >
               Get PRO
-            </a>
+            </ButtonLink>
           </li>
         </ul>
       </div>
@@ -108,7 +108,7 @@ const pages = [
         </a>
       </li>
       <li class="nav-item search-box">
-        <a href="#search" class="nav-link search-button bi bi-search"></a>
+        <a href="#" class="nav-link search-button bi bi-search"></a>
       </li>
     </menu>
 
