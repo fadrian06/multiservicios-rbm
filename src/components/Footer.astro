@@ -103,7 +103,7 @@ const paymentMethods = [
         elementum diam in. Nisi, purus vitae, ultrices nunc. Sit ac sit suscipit
         hendrerit.
       </p>
-      <ul class="m-0 p-0 nav">
+      <ul class="nav">
         {
           socialLinks.map((link) => (
             <li class="nav-item">
@@ -121,9 +121,9 @@ const paymentMethods = [
       sectionsLinks.map((section) => (
         <div class="col-xl-2 col-sm-6">
           <h2>{section.title}</h2>
-          <ul class="list-unstyled">
+          <ul class="list-group">
             {section.links.map((link) => (
-              <li>
+              <li class="list-group-item">
                 <a href={link.href}>{link.label}</a>
               </li>
             ))}
@@ -137,7 +137,7 @@ const paymentMethods = [
         Do you have any questions or suggestions?
         <a href={`mailto:${email}`}>{email}</a>
       </p>
-      <p>
+      <p class="m-0">
         Do you need support? Give us a call.
         <a href={`tel:${phone}`}>{phone}</a>
       </p>
@@ -152,7 +152,7 @@ const paymentMethods = [
           <img src={ship.src} alt={ship.alt} class="img-fluid" />
         ))
       }
-      <span>Payment Option:</span>
+      Payment Option:
       {
         paymentMethods.map((method) => (
           <img src={method.src} alt={method.alt} />
