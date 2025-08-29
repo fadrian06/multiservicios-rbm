@@ -306,35 +306,6 @@
 			});
 	};
 
-	var searchPopup = () => {
-		// open search box
-		$(".navbar").on("click", ".search-button", (e) => {
-			$(".search-popup").toggleClass("is-visible");
-		});
-
-		$(".navbar").on("click", ".btn-close-search", (e) => {
-			$(".search-popup").toggleClass("is-visible");
-		});
-
-		$(".search-popup-trigger").on("click", (b) => {
-			b.preventDefault();
-			$(".search-popup").addClass("is-visible"),
-				setTimeout(() => {
-					$(".search-popup").find("#search-popup").focus();
-				}, 350);
-		}),
-			$(".search-popup").on("click", function (b) {
-				($(b.target).is(".search-popup-close") ||
-					$(b.target).is(".search-popup-close svg") ||
-					$(b.target).is(".search-popup-close path") ||
-					$(b.target).is(".search-popup")) &&
-					(b.preventDefault(), $(this).removeClass("is-visible"));
-			}),
-			$(document).keyup((b) => {
-				"27" === b.which && $(".search-popup").removeClass("is-visible");
-			});
-	};
-
 	$(window).scroll(() => {
 		initScrollNav();
 	});
@@ -350,7 +321,6 @@
 
 	// document ready
 	$(document).ready(() => {
-		searchPopup();
 		initJarallax();
 		initTextFx();
 		initQuantitySpinner();
