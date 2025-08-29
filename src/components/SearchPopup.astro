@@ -10,61 +10,31 @@ const categories = [
 ];
 ---
 
-<div class="search-popup bg-body position-fixed h-100 w-100 text-center z-2">
-  <div
-    class="search-popup-container container col-xl-6 offset-xl-3 position-relative top-50 d-grid gap-5"
-  >
-    <form class="input-group">
-      <input
-        type="search"
-        class="form-control bg-transparent border-0 border-bottom rounded-0"
-        placeholder="Type and press enter"
-      />
-      <button class="btn bi bi-search"></button>
-    </form>
+<div class="modal bg-body text-center" tabindex="-1" id="SearchPopup">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content bg-transparent border-0 gap-5">
+      <form class="input-group">
+        <input
+          type="search"
+          class="form-control bg-transparent border-0 border-bottom rounded-0"
+          placeholder="Type and press enter"
+        />
+        <button class="btn bi bi-search"></button>
+      </form>
 
-    <h2 class="m-0">Browse Categories</h2>
+      <h2 class="m-0">Browse Categories</h2>
 
-    <ul class="list-unstyled m-0 d-flex justify-content-center flex-wrap gap-5">
-      {
-        categories.map((category) => (
-          <li>
-            <a class="btn btn-link" href={category.name}>
-              {category.name}
-            </a>
-          </li>
-        ))
-      }
-    </ul>
+      <ul class="list-unstyled m-0 d-flex justify-content-center flex-wrap">
+        {
+          categories.map((category) => (
+            <li>
+              <a class="btn btn-link" href={category.link}>
+                {category.name}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
   </div>
 </div>
-
-<style>
-  .search-popup {
-    opacity: 0;
-    visibility: hidden;
-    transition:
-      opacity 300ms 0s,
-      visibility 0s 300ms;
-  }
-
-  .search-popup.is-visible {
-    opacity: 1;
-    visibility: visible;
-    cursor:
-      url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath fill='%23FFF' d='M20 1l-1-1-9 9-9-9-1 1 9 9-9 9 1 1 9-9 9 9 1-1-9-9'/%3E%3C/svg%3E"),
-      pointer;
-    transition:
-      opacity 300ms 0s,
-      visibility 0s 0s;
-  }
-
-  .search-popup-container {
-    cursor: default;
-    transition: transform 300ms;
-  }
-
-  .is-visible .search-popup-container {
-    transform: translateY(-50%);
-  }
-</style>
