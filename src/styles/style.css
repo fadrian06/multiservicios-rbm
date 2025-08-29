@@ -264,24 +264,6 @@ a {
   font-weight: 100;
 }
 
-/* preloader */
-.preloader {
-  position: fixed;
-  top: 0;
-  z-index: 9999;
-  background: var(--bs-black);
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: height 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-
-.preloader.loaded {
-  height: 0;
-}
-
 /* navbar */
 @media screen and (max-width:768px) {
   .navbar-brand img {
