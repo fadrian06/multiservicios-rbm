@@ -10,7 +10,9 @@
   },
   "dependencies": {
     "@fontsource/inter": "^5.2.6",
+    "@types/aos": "^3.0.7",
     "@types/jquery": "^3.5.33",
+    "aos": "^2.3.4",
     "astro": "^5.13.4",
     "bootstrap": "^5.3.8",
     "bootstrap-icons": "^1.13.1",

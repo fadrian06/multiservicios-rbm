@@ -4,6 +4,7 @@ import "bootstrap-icons/font/bootstrap-icons.min.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "swiper/css/bundle";
 import "jarallax/dist/jarallax.min.css";
+import "aos/dist/aos.css";
 
 import "../styles/vendor.css";
 import "../styles/style.css";
@@ -25,8 +26,11 @@ import "../styles/style.css";
     <script>
       import Swiper from "swiper/bundle";
       import { jarallax } from "jarallax";
+      import AOS from "aos";
 
       jarallax(document.querySelectorAll(".jarallax"), {});
+
+      AOS.init();
 
       window.Swiper = Swiper;
     </script>

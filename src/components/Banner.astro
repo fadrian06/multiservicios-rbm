@@ -26,7 +26,7 @@ const banners = [
 ];
 ---
 
-<div class="container-fluid">
+<div class="container-fluid" data-aos="fade-in">
   <div class="swiper">
     <div class="swiper-wrapper">
       {
@@ -34,7 +34,7 @@ const banners = [
           <div class="swiper-slide jarallax d-flex align-items-center">
             <img src={banner.image} class="jarallax-img" alt={banner.title} />
             <div class="container p-5">
-              <h2 class="display-1 txt-fx slide-up">{banner.title}</h2>
+              <h2 class="display-1">{banner.title}</h2>
               <p>{banner.caption}</p>
               <ButtonLink href={banner.link}>{banner.linkText}</ButtonLink>
             </div>

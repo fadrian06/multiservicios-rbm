@@ -185,39 +185,6 @@
 		});
 	};
 
-	// Animate Texts
-	var initTextFx = () => {
-		$(".txt-fx").each(function () {
-			var newstr = "";
-			var count = 0;
-			var delay = 300;
-			var stagger = 10;
-			var words = this.textContent.split(/\s/);
-
-			$.each(words, (key, value) => {
-				newstr += '<span class="word">';
-
-				for (var i = 0, l = value.length; i < l; i++) {
-					newstr +=
-						"<span class='letter' style='transition-delay:" +
-						(delay + stagger * count) +
-						"ms;'>" +
-						value[i] +
-						"</span>";
-					count++;
-				}
-				newstr += "</span>";
-				newstr +=
-					"<span class='letter' style='transition-delay:" +
-					delay +
-					"ms;'>&nbsp;</span>";
-				count++;
-			});
-
-			this.innerHTML = newstr;
-		});
-	};
-
 	var initScrollNav = () => {
 		var scroll = $(window).scrollTop();
 
@@ -312,7 +279,6 @@
 
 	// document ready
 	$(document).ready(() => {
-		initTextFx();
 		initQuantitySpinner();
 		initSlider();
 		initImageZoom();
@@ -321,11 +287,6 @@
 			iframe: true,
 			innerWidth: 960,
 			innerHeight: 585,
-		});
-
-		AOS.init({
-			duration: 1200,
-			once: true,
 		});
 
 		var Sticky = new hcSticky(".sticky-info", {
