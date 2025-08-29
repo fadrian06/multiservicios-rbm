@@ -185,15 +185,6 @@
 		});
 	};
 
-	// init jarallax parallax
-	var initJarallax = () => {
-		jarallax(document.querySelectorAll(".jarallax"));
-
-		jarallax(document.querySelectorAll(".jarallax-keep-img"), {
-			keepImg: true,
-		});
-	};
-
 	// Animate Texts
 	var initTextFx = () => {
 		$(".txt-fx").each(function () {
@@ -321,7 +312,6 @@
 
 	// document ready
 	$(document).ready(() => {
-		initJarallax();
 		initTextFx();
 		initQuantitySpinner();
 		initSlider();

@@ -3,6 +3,7 @@ import "@fontsource/inter";
 import "bootstrap-icons/font/bootstrap-icons.min.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "swiper/css/bundle";
+import "jarallax/dist/jarallax.min.css";
 
 import "../styles/vendor.css";
 import "../styles/style.css";
@@ -23,6 +24,9 @@ import "../styles/style.css";
 
     <script>
       import Swiper from "swiper/bundle";
+      import { jarallax } from "jarallax";
+
+      jarallax(document.querySelectorAll(".jarallax"), {});
 
       window.Swiper = Swiper;
     </script>
