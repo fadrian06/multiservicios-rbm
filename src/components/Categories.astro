@@ -1,10 +1,5 @@
 ---
-const categories: {
-  name: string;
-  image: string;
-  link: string;
-  cols?: number;
-}[] = [
+const categories = [
   {
     name: "Electronic Gadgets",
     image: "images/category-thumb-1.jpg",
@@ -43,7 +38,7 @@ const categories: {
               <img
                 src={category.image}
                 alt={category.name}
-                class="img-fluid jarallax-img object-fit-cover"
+                class="jarallax-img"
               />
               <figcaption class="position-absolute bottom-0 m-3">
                 <a href={category.link} class="btn btn-link">
