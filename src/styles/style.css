@@ -355,30 +355,6 @@ a {
 	transform: translate3d(0, 0, 0);
 }
 
-/* swiper slide-clip */
-.slide-clip .swiper-slide .image-holder img {
-	transform: scale(1.2);
-	transition: transform 1s ease-in-out;
-}
-
-.slide-clip .swiper-slide.swiper-slide-active .image-holder img {
-	transform: scale(1);
-}
-
-.slide-clip .swiper-slide .image-holder {
-	clip-path: inset(100% 0 0 0);
-	display: block;
-}
-
-.slide-clip .swiper-slide.swiper-slide-active .image-holder {
-	animation: 1s slide-clip forwards;
-}
-
-.slide-clip .swiper-slide.swiper-slide-prev .image-holder,
-.slide-clip .swiper-slide.swiper-slide-next .image-holder {
-	animation: 1s slide-down;
-}
-
 @keyframes slide-clip {
 	0% {
 		clip-path: inset(100% 0 0 0);
@@ -545,18 +521,6 @@ a {
 .image-zoom-effect {
 	display: flex;
 	flex-wrap: wrap;
-}
-
-.image-zoom-effect .image-holder {
-	width: 100%;
-	height: auto;
-	overflow: hidden;
-	transform: scale(1);
-	transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.image-zoom-effect:hover .image-holder {
-	transform: scale(0.95);
 }
 
 .image-zoom-effect img {
@@ -809,24 +773,6 @@ a {
 
 .link-effect:hover a::after {
 	transform: translateY(0%);
-}
-
-/* product item */
-.product-item .btn-wishlist {
-	display: block;
-	z-index: 111;
-	position: absolute;
-	top: 5px;
-	padding: 10px;
-	color: var(--bs-black);
-	background: var(--bs-white);
-	right: 5px;
-	opacity: 0;
-	transition: opacity 0.3s ease-in;
-}
-
-.product-item:hover .btn-wishlist {
-	opacity: 1;
 }
 
 /* rotating text */
@@ -1209,23 +1155,6 @@ a.btn-link.text-light:after {
 .hover-fx-fade:hover p,
 .hover-fx-fade:hover a {
 	opacity: 1;
-	transform: translateY(0);
-}
-
-/* hover-effect-slide */
-.hover-effect-slide .image-holder {
-	overflow: hidden;
-}
-.hover-effect-slide img {
-	transform: translateY(40px);
-	transition: transform 0.3s ease-out;
-}
-.hover-effect-slide .btn {
-	transform: translateY(100%);
-	transition: transform 0.3s ease-out;
-}
-.hover-effect-slide:hover img,
-.hover-effect-slide:hover .btn {
 	transform: translateY(0);
 }
 
