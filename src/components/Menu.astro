@@ -4,10 +4,16 @@ import MenuLinks from "./MenuLinks.astro";
 const offcanvasId = crypto.randomUUID();
 ---
 
-<nav class="navbar navbar-expand-xl sticky-top bg-body" data-aos="fade-in">
+<nav class="navbar navbar-expand-xl sticky-top bg-body">
   <div class="container-fluid">
     <a href="./">
-      <img src="images/logo.svg" height="50" class="img-fluid" alt="logo" />
+      <img
+        src="images/logo.png"
+        height="100"
+        class="w-100 object-fit-contain"
+        alt="logo"
+        style="filter: invert(1)"
+      />
     </a>
 
     <MenuLinks hideInMobiles />

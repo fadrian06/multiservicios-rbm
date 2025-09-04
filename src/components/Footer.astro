@@ -93,9 +93,11 @@ const paymentMethods = [
     <div class="col-xl-3 col-sm-6">
       <a href="./">
         <img
-          src="images/logo.svg"
-          class="img-fluid object-fit-contain"
+          src="images/logo.png"
+          class="w-100 object-fit-contain"
           alt="logo"
+          height="100"
+          style="filter: invert(1)"
         />
       </a>
       <p>
@@ -155,7 +157,7 @@ const paymentMethods = [
       Payment Option:
       {
         paymentMethods.map((method) => (
-          <img src={method.src} alt={method.alt} />
+          <img src={method.src} alt={method.alt} class="mx-1" />
         ))
       }
     </div>
